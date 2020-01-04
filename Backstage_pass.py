@@ -16,4 +16,3 @@ class Backstage_pass(Normal_item):
             self.quality = 0
         self.comprobar_quality()
         return self.quality
-            
