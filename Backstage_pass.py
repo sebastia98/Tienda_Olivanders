@@ -1,5 +1,8 @@
 from Normal_item import Normal_item
+
+
 class Backstage_pass(Normal_item):
+
     NAME = "Backstage passes to a TAFKAL80ETC concert"
 
     def __init__(self, sell_in, quality):
@@ -14,5 +17,7 @@ class Backstage_pass(Normal_item):
             self.quality += 3
         elif self.sell_in < 0:
             self.quality = 0
+
         self.comprobar_quality()
+
         return self.quality

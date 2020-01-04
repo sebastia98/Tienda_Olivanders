@@ -1,5 +1,8 @@
 from Normal_item import Normal_item
+
+
 class Conjured(Normal_item):
+
     NAME = "Conjured"
 
     def __init__(self, sell_in, quality):
@@ -10,5 +13,7 @@ class Conjured(Normal_item):
             self.quality -= 2
         else:
             self.quality -= 4
+
         self.comprobar_quality()
+
         return self.quality
