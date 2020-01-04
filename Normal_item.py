@@ -1,5 +1,6 @@
 from Item import Item
-class Normal_item(Item):
+from Updatable import Updatable
+class Normal_item(Item, Updatable):
     def set_sell_in(self):
         self.sell_in -= 1
     def update_quality(self):
