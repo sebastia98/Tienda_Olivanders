@@ -13,11 +13,16 @@ def test_agedbrie():
     sellin = 10
     quality = 10
 
-    for _ in range(sellin):
+    for _ in range(sellin + 2):
         sellin -= 1
         quality += 1
         queso.update_quality()
         queso.set_sell_in()
+
+        if quality < 0:
+            quality = 0
+        elif quality > 50:
+            quality = 50
 
         assert queso.sell_in == sellin
         assert queso.quality == quality
@@ -28,7 +33,7 @@ def test_sulfuras():
     sellin = 10
     quality = 10
 
-    for i in range(sellin):
+    for i in range(sellin + 2):
         sulfura.set_sell_in()
         sulfura.update_quality()
 
@@ -36,12 +41,12 @@ def test_sulfuras():
         assert sulfura.quality == quality
 
 
-def test_Backstage_pass():
+def test_backstage_pass():
     backstage = Backstage_pass(10, 10)
     sellin = 10
     quality = 10
 
-    for _ in range(sellin):
+    for _ in range(sellin + 2):
         sellin -= 1
         if sellin > 10:
             quality += 1
@@ -51,6 +56,11 @@ def test_Backstage_pass():
             quality += 3
         elif sellin < 0:
             quality = 0
+
+        if quality < 0:
+            quality = 0
+        elif quality > 50:
+            quality = 50
 
         backstage.set_sell_in()
         backstage.update_quality()
@@ -64,7 +74,7 @@ def test_conjured():
     sellin = 10
     quality = 10
 
-    for _ in range(sellin):
+    for _ in range(sellin + 2):
         sellin -= 1
         if sellin >= 0:
             quality -= 2
@@ -72,6 +82,11 @@ def test_conjured():
             quality -= 4
         if quality < 0:
             quality = 0
+
+        if quality < 0:
+            quality = 0
+        elif quality > 50:
+            quality = 50
 
         conjured.set_sell_in()
         conjured.update_quality()
@@ -85,9 +100,15 @@ def test_Normal_item():
     sellin = 10
     quality = 10
 
-    for _ in range(sellin):
+    for _ in range(sellin + 2):
         sellin -= 1
         quality -= 1
+
+        if quality < 0:
+            quality = 0
+        elif quality > 50:
+            quality = 50
+
         normal.set_sell_in()
         normal.update_quality()
 
