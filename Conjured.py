@@ -6,4 +6,8 @@ class Conjured(Normal_item):
         super().__init__(self.NAME, sell_in, quality)
 
     def update_quality(self):
-        self.quality -= 2
+        if self.sell_in >= 0:
+            self.quality -= 2
+        else:
+            self.quality -= 4
+        self.comprobar_quality()
