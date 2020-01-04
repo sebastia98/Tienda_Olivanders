@@ -9,3 +9,4 @@ class Aged_brie(Normal_item):
     def update_quality(self):
         self.quality += 1
         self.comprobar_quality()
+        return self.quality

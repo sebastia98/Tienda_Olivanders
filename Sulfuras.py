@@ -6,6 +6,6 @@ class Sulfuras(Normal_item):
         super().__init__(self.NAME, sell_in, quality)
     
     def update_quality(self):
-        pass
+        return self.quality
     def set_sell_in(self):
-        pass
+        return self.sell_in

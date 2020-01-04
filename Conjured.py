@@ -11,3 +11,4 @@ class Conjured(Normal_item):
         else:
             self.quality -= 4
         self.comprobar_quality()
+        return self.quality

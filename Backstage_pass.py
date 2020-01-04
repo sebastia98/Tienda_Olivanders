@@ -15,4 +15,5 @@ class Backstage_pass(Normal_item):
         elif self.sell_in < 0:
             self.quality = 0
         self.comprobar_quality()
+        return self.quality
             
