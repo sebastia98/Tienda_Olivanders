@@ -14,15 +14,15 @@ def generar_html_items(items):
 
 def anadir_item(item, sellin, quality):
     if item == "Aged Brie":
-        gilded_rose.items.append(Aged_brie(int(sellin), int(quality)))
+        gilded_rose.set_items(Aged_brie(int(sellin), int(quality)))
     elif item == "Sulfuras":
-        gilded_rose.items.append(Sulfuras(int(sellin), int(quality)))
+        gilded_rose.set_items(Sulfuras(int(sellin), int(quality)))
     elif item == "Backstage Pass":
-        gilded_rose.items.append(Backstage_pass(int(sellin), int(quality)))
+        gilded_rose.set_items(Backstage_pass(int(sellin), int(quality)))
     elif item == "Conjured":
-        gilded_rose.items.append(Conjured(int(sellin), int(quality)))
+        gilded_rose.set_items(Conjured(int(sellin), int(quality)))
     else:
-        gilded_rose.items.append(Normal_item(item, int(sellin), int(quality)))
+        gilded_rose.set_items(Normal_item(item, int(sellin), int(quality)))
     return None
 
 gilded_rose = Gilded_rose([])
