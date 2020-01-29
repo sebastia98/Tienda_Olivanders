@@ -11,7 +11,7 @@ def index():
     html += "<a href=\"http://127.0.0.1:5000/update\">update</a>"
     return html
     """
-    return render_template("index2.html", gilded_rose = gilded_rose)
+    return render_template("index.html", gilded_rose = gilded_rose)
 
 @app.route("/update")
 def update():
