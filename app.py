@@ -11,14 +11,18 @@ def index():
     html += "<a href=\"http://127.0.0.1:5000/update\">update</a>"
     return html
     """
-    return render_template("index.html", gilded_rose = gilded_rose)
+    return render_template("index.html")
+
+@app.route("/lista")
+def lista():
+    return render_template("lista.html", gilded_rose=gilded_rose)
 
 @app.route("/update")
 def update():
     gilded_rose.update_quality()
-    return index()
+    return lista()
 
 @app.route("/anadir/<item>/<sellin>/<quality>")
 def anadir(item, sellin, quality):
     anadir_item(item, sellin, quality)
-    return index()
+    return lista()
