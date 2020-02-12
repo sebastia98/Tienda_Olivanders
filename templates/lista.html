@@ -1,45 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title>Tienda Ollivanders</title>
+  <meta charset="UTF-8">
+  <!-- Aqui son totes les importacions de boostrap, tant de css com de javascript -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <title>Tienda Ollivanders</title>
 </head>
+
 <body style="background-color: lightcyan;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="http://127.0.0.1:5000">Tienda Ollivander</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="http://127.0.0.1:5000">Inicio<span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="http://127.0.0.1:5000/lista">Lista items</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Actualizar items</a>
-              </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Añadir item
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Item 1</a>
-                <a class="dropdown-item" href="#">Item 2</a>
-                <a class="dropdown-item" href="#">Item 3</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      
+  <!-- Barra de navegació per poder-se moure entre les diferentes págines -->
+  <!-- Esta fet seguint la plantilla de bootstrap -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://127.0.0.1:5000">Tienda Ollivander</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="http://127.0.0.1:5000">Inicio<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="http://127.0.0.1:5000/lista">Lista items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Actualizar items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Añadir item</a>
+        </li>
+      </ul>
+      <!-- Cercador de items -->
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Item" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+
+  <br />
+
+  <div>
+    <!-- Taula on es mostren todes els items creats -->
+    <table class="table table-bordered table-striped table-dark">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Item</th>
+          <th scope="col">Sell in</th>
+          <th scope="col">Quality</th>
+          <th scope="col">Eliminar</th>
+          <th scope="col">Modificar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Per cada taula s'utilitza botons per modificar y eliminar elements -->
+        <tr>
+          <td>Aged Brie</td>
+          <td>5</td>
+          <td>8</td>
+          <td>
+            <a href="http://127.0.0.1:5000/index" class="btn btn-danger" tabindex="-1" role="button"
+              aria-disabled="true">Eliminar</a>
+          </td>
+          <td>
+            <a href="http://127.0.0.1:5000/index" class="btn btn-primary" tabindex="-1" role="button"
+              aria-disabled="true">Modificar</a>
+            </td>
+        </tr>
+        <tr>
+          <td>Sulfuras</td>
+          <td>7</td>
+          <td>1</td>
+          <td><a href="http://127.0.0.1:5000/index" class="btn btn-danger" tabindex="-1" role="button"
+            aria-disabled="true">Eliminar</a></td>
+          <td>
+            <a href="http://127.0.0.1:5000/index" class="btn btn-primary" tabindex="-1" role="button"
+              aria-disabled="true">Modificar</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
 </body>
+
 </html>
