@@ -43,6 +43,11 @@
           <a class="nav-link" href="#">Añadir item</a>
         </li>
       </ul>
+      <!-- Cercador de items -->
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Item" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
     </div>
   </nav>
 
@@ -56,6 +61,8 @@
           <th scope="col">Item</th>
           <th scope="col">Sell in</th>
           <th scope="col">Quality</th>
+          <th scope="col">Eliminar</th>
+          <th scope="col">Modificar</th>
         </tr>
       </thead>
       <tbody>
@@ -63,11 +70,25 @@
           <td>Aged Brie</td>
           <td>5</td>
           <td>8</td>
+          <td>
+            <a href="http://127.0.0.1:5000/index" class="btn btn-danger" tabindex="-1" role="button"
+              aria-disabled="true">Eliminar</a>
+          </td>
+          <td>
+            <a href="http://127.0.0.1:5000/index" class="btn btn-primary" tabindex="-1" role="button"
+              aria-disabled="true">Modificar</a>
+            </td>
         </tr>
         <tr>
           <td>Sulfuras</td>
           <td>7</td>
           <td>1</td>
+          <td><a href="http://127.0.0.1:5000/index" class="btn btn-danger" tabindex="-1" role="button"
+            aria-disabled="true">Eliminar</a></td>
+          <td>
+            <a href="http://127.0.0.1:5000/index" class="btn btn-primary" tabindex="-1" role="button"
+              aria-disabled="true">Modificar</a>
+          </td>
         </tr>
       </tbody>
     </table>
