@@ -42,31 +42,57 @@
             </ul>
         </div>
     </nav>
+    <br><br><br><br>
     <div class="container text-center mx-auto">
+        <!--Formulario-->
         <form>
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Seleccione Item a modificar</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                <option>Item 1</option>
-                <option>Item 2</option>
-                <option>Item 3</option>
-                <option>Item 4</option>
-                <option>Item 5</option>
+                <label for="exampleFormControlSelect1"><h1>Seleccione Item a modificar</h1></label>
+                <br><br>
+                <select multiple class="form-control" id="exampleFormControlSelect1">
+                    <option>Item 1</option>
+                    <option>Item 2</option>
+                    <option>Item 3</option>
+                    <option>Item 4</option>
+                    <option>Item 5</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect2">Example multiple select</label>
-                <select multiple class="form-control" id="exampleFormControlSelect2">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <p>
+                <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Modificar Item
+                </a>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Nombre">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary" type="submit">Actualizar Nombre</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Sell in">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary" type="submit">Actualizar Sell in</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Quality">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-primary" type="submit">Actualizar Quality</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
