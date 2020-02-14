@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!-- Aqui son totes les importacions de boostrap, tant de css com de javascript -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
@@ -12,6 +13,8 @@
 </head>
 
 <body style="background-color: lightcyan;">
+    <!-- Barra de navegació per poder-se moure entre les diferentes págines -->
+  <!-- Esta fet seguint la plantilla de bootstrap -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="http://127.0.0.1:5000">Tienda Ollivander</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,15 +45,19 @@
     <br/>
     <br/>
     <br/>
-
+    
+    <!-- Aquest es el recuadre del formulari per crear objectes -->
     <div class="container">
         <div class="row justify-content-md-center">
+            <!-- S'utlitzen columnes per poder centrar de manera manual el formulari -->
             <div class="col"></div>
             <div class="col">
+                <!-- Titol del formulari -->
                 <h1>Añadir item:</h1>
                 <br/>
                 <form action="http://127.0.0.1:5000/index">
                     <div class="form-group text-light bg-dark box-shadow rounded border border-dark p-md-5">
+                        <!-- Estructura del formulari amb labels i inputs -->
                         <label for="itemInput">Item:</label>
                         <input id="itemInput" class="form-control form-control-sm" type="text" placeholder="Nombre item:"/>
                         <br/>
