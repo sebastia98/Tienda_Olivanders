@@ -17,9 +17,9 @@ def index():
 def lista():
     return render_template("lista.html", gilded_rose=gilded_rose)
 
-@app.route("/formulario")
+@app.route("/modificar")
 def modificar():
-    return render_template("formulario.html")
+    return render_template("modificar.html")
 
 @app.route("/update")
 def update():
