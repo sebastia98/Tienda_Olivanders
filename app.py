@@ -26,7 +26,11 @@ def update():
     gilded_rose.update_quality()
     return lista()
 
+@app.route("/anadir")
+def anadir():
+    return render_template("anadir.html")
+
 @app.route("/anadir/<item>/<sellin>/<quality>")
-def anadir(item, sellin, quality):
+def anadirURL(item, sellin, quality):
     anadir_item(item, sellin, quality)
     return lista()
