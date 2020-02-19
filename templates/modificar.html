@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!--Capçalera amb totes les importacions de bootstrap-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
@@ -10,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Tienda Ollivanders</title>
 </head>
+<!--Cos de la pàgina-->
 
 <body style="background-color: lightcyan;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -17,7 +19,7 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
+        <!--Barra de navegació-->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -28,19 +30,19 @@
                 </li>
                 <li class="nav-item active">
                     <a class="nav-link" href="http://127.0.0.1:5000/modificar">Modificar items</a>
-                  </li>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:5000/update">Actualizar items</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="http://127.0.0.1:5000/anadir">Añadir item</a>
-                  </li>
+                </li>
             </ul>
         </div>
     </nav>
     <br><br><br><br>
     <div class="container text-center mx-auto">
-        <!--Formulario-->
+        <!--Formulari per seleccionar Item-->
         <form>
             <div class="form-group">
                 <label for="exampleFormControlSelect1"><h1>Seleccione Item a modificar</h1></label>
@@ -53,6 +55,7 @@
                     <option>Item 5</option>
                 </select>
             </div>
+            <!--Desplegable que permet modifiar les tres característiques del cada item (nom, quality i sell_in)-->
             <p>
                 <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                     Modificar Item
